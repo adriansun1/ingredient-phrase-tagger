@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 import ingredient_phrase_tagger
 
 
-requires, extra = ['Unidecode==0.04.14', 'pandas==0.17.1'], {}
+requires, extra = ['Unidecode==0.04.14', 'numpy==1.10.4','pandas==0.17.1'], {}
 if sys.version_info >= (3,):
     extra['use_2to3'] = True
 
@@ -20,5 +20,6 @@ setup(
     install_requires=requires,
     packages=find_packages(),
     package_dir={'ingredient_phrase_tagger': 'ingredient_phrase_tagger'},
+    setup_requires=['numpy==1.10.4'],
     **extra
 )
